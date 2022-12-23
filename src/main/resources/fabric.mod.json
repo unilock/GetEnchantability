@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 1,
+  "id": "getenchantability",
+  "version": "${version}",
+  "name": "GetEnchantability",
+  "description": "Shows an enchantable item's \"enchantability\" in its tooltip.",
+  "authors": [
+    "unilock"
+  ],
+  "contact": {},
+  "license": "MIT",
+  "icon": "assets/getenchantability/icon.png",
+  "environment": "client",
+  "entrypoints": {
+    "client": [
+      "net.unilock.getenchantability.GetEnchantability"
+    ]
+  },
+  "mixins": [
+    "getenchantability.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.14.11",
+    "minecraft": "1.19.2"
+  }
+}
