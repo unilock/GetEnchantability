@@ -5,6 +5,7 @@ import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.text.Text;
+import net.minecraft.util.Formatting;
 import org.jetbrains.annotations.Nullable;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
@@ -23,7 +24,7 @@ public class ItemStackMixin {
 
         if (item.isEnchantable(stack)) {
             int enchantability = item.getEnchantability();
-            list.add(Text.literal("Enchantability: " + enchantability));
+            list.add(Text.translatable("getenchantability.enchantability", enchantability).formatted(Formatting.GRAY));
         }
     }
 }
